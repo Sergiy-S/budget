@@ -14,18 +14,18 @@ class Main(tk.Frame):
 		toolbar = tk.Frame(bg='#d7d8e0', bd=2)
 		toolbar.pack(side=tk.TOP, fill=tk.X)
 
-		self.add_img = tk.PhotoImage(file="C:/python/budget_old/images/add.png")
+		self.add_img = tk.PhotoImage(file="C:/python/budget/images/add.png")
 		btn_open_dialog = tk.Button(toolbar, text="Add item", command=self.open_dialog, bg='#d7d8e0', bd=0, compound=tk.TOP, image=self.add_img)
 		
 		btn_open_dialog.pack(side=tk.LEFT)
 
-		self.update_img = tk.PhotoImage(file="C:/python/budget_old/images/edit.png")
+		self.update_img = tk.PhotoImage(file="C:/python/budget/images/edit.png")
 		btn_edit_dialog = tk.Button(toolbar, text="Edit", bg='#d7d8e0', bd=0, image=self.update_img,
 									compound=tk.TOP, command=self.open_update_dialog)
 		btn_edit_dialog.pack(side=tk.LEFT)
 		btn_edit_dialog.place(x=80, y=0)
 
-		self.delete_img = tk.PhotoImage(file="C:/python/budget_old/images/delete.png")
+		self.delete_img = tk.PhotoImage(file="C:/python/budget/images/delete.png")
 		btn_delete = tk.Button(toolbar, text="Delete", bg='#d7d8e0', bd=0, image=self.delete_img,
 									compound=tk.TOP, command=self.delete_records)
 		btn_delete.pack(side=tk.LEFT)
@@ -153,7 +153,3 @@ if __name__ == "__main__":
 	root.geometry("650x450+300+200")
 	root.resizable(False, False)
 	root.mainloop()
-
-
-# COMPILE COMMAND:
-# pyinstaller -w -F --icon=app.ico main.py
